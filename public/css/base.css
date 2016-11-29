@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--dark-color);
+}
+
+
+html, body, h1, h2, h3, h4, h5, p, a {
+	margin: 0;
+	text-decoration: none;
+	color: var(--light-color);
+}
+
+h1 {
+	font-size: 28px;
+}
+
+h2 {
+	font-size: 22px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+a {
+	font-size: 16px;
+}
+
+p {
+	font-size: 14px;
+}
+
+div {
+	display: block;
+}
