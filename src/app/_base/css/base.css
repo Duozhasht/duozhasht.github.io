@@ -8,14 +8,17 @@
 
 html, body {
 	font-family: 'Roboto', sans-serif;
-	background-color: var(--dark-color);
 }
-
 
 html, body, h1, h2, h3, h4, h5, p, a {
 	margin: 0;
 	text-decoration: none;
-	color: var(--light-color);
+	color: var(--text-color);
+}
+
+body {
+    margin: 0 100px;
+    margin-bottom: 50px;
 }
 
 h1 {

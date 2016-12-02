@@ -1,11 +1,14 @@
-@import url('variables.css');
-@import url('base.css');
-@import url('work.css');
-@import url('about.css');
+/* Common Imports */
+@import './css/variables.css';
+@import './css/base.css';
+/* Components Imports */
+@import '../about/_base/about.component.css';
+@import '../work/_base/work.component.css';
 
 body {
-    margin: 0 100px;
+    background-color: var(--background-color); 
 }
+
 .navbar {
     display: flex;
     align-items: center;
@@ -41,11 +44,9 @@ body {
 }
 
 .navbar > .links > ul > li > a {
-    //color: var(--white);
     height: 100%;
 }
 
 .navbar > .links > ul > li > a:hover {
-    //color: var(--grey);
     height: 100%;
 }

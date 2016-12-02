@@ -1,0 +1,66 @@
+.about {
+	display: flex;
+	flex-wrap: wrap;
+
+}
+.about > .tile {
+	border: 5px var(--background-color) solid;
+}
+
+.about > .intro {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+	height: 600px;
+	padding: 25px;
+	background-color: var(--text-color);
+}
+
+.about > .intro h1,
+.about > .intro h2,
+.about > .intro h3,
+.about > .intro h4,
+.about > .intro h5,
+.about > .intro p,
+.about > .intro a {
+	color: var(--background-color);
+}
+
+.about > .intro > .picture {
+	display: block;
+	width: 30%;
+}
+
+.about > .intro > .picture > .header {
+	padding-top: 25px;
+	padding-bottom: 5px;
+	text-align: center;
+}
+.about > .intro > .picture > .sub-header {
+	text-align: center;
+}
+
+.about > .intro > .picture img {
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	border-radius: 50%;
+}
+
+.about > .intro > .description {
+	width: 70%;
+	text-align: justify;
+}
+
+.about > .academic {
+	width: 50%;
+	height: 300px;
+	background-color: var(--blue);
+}
+.about > .focus {
+	width: 50%;
+	height: 300px;
+	background-color: var(--grey);
+}
