@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pinehouse Concerts</title>
+  <link rel='stylesheet' type='text/css' href='./styles.css'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet' crossorigin='anonymous'>
+</head>
+
+<script type="text/javascript">
+  
+document.addEventListener('DOMContentLoaded', function(event) {
+  document.getElementById('sidebar-button').addEventListener('click', function () {
+    var sidebar = document.getElementById('sidebar');
+    if(sidebar.className.includes('open')) {
+      sidebar.className = 'sidebar';
+    } else {
+      sidebar.className= 'sidebar open';
+    }
+  });
+})
+
+
+</script>
+
+<body>
+
+  <section id='home'>
+    <div class='container'>
+      <div class='navbar'>
+        <div class='locale border'>
+          <a href='#'>EN</a>
+        </div>
+        <div class='brand border'>
+          <h1>Pinehouse Concerts</h1>
+          <div id='sidebar-button' class='sidebar-button'>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </div>
+        </div>
+      </div>
+      <div class='content'>
+        <div class='next border'>
+          <h1>THIS WEEK</h1>
+        </div>
+        <div class='home'>
+          <div class='info'>
+            <div class='date border'>
+              <span class='day'>30.12</span>
+              <span class='time'>08PM</span>
+            </div>
+            <div class='name'>
+              <h2>THE MASKOUVIC DANCE BAND</h2>
+            </div>
+            <a href='#' class='more border'>More +</a>
+          </div>
+          <div class='picture'></div>
+        </div>
+      </div>
+      <div class='footer'>
+        <div class='subscribe'>
+          <div class='form'>
+            <h5>Subscribe for updates!</h5>
+            <input class='text' type='text' name='email' placeholder='Email Address'>
+            <input class='btn' type='submit' name='Submit'>
+          </div>
+          <div class='social'>
+            <ul>
+              <li>
+                <a href='#'>
+                  <i class='fab fa-facebook-square'></i>
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <i class='fab fa-instagram'></i>
+                  Instagram
+              </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <i class='fab fa-youtube-square'></i>
+                  Youtube
+              </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class='rights'>
+          <div class='left'>
+            <p>© 2019 Pinehouse Concerts</p>
+          </div>
+          <div class='right'>
+            <p>by Chilli Pepper Fields</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='sidebar' class='sidebar'>
+      <ul>
+        <li><a href='./index.html'>Menu</a></li>
+        <li><a href='./about.html'>About Us</a></li>
+        <li><a href='./artists.html'>Artists</a></li>
+        <li><a href='./contact.html'>Contact</a></li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>
+
+        <!--
+        <iframe src='https://www.youtube.com/embed/mfRj60-MpRU' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+        <-->

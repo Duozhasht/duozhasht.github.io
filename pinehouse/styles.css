@@ -1,0 +1,623 @@
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('./fonts/fonts/SuisseIntl-Regular-WebM.woff') format('woff'),
+       url('./fonts/fonts/SuisseIntl-Regular-WebM.woff2') format('woff2'),
+
+       url('./fonts/fonts/SuisseIntl-SemiBold-WebM.woff') format('woff'),
+       url('./fonts/fonts/SuisseIntl-SemiBold-WebM.woff2') format('woff2'),
+
+       url('./fonts/fonts/SuisseIntl-Bold-WebM.woff') format('woff'),
+       url('./fonts/fonts/SuisseIntl-Bold-WebM.woff2') format('woff2');
+}
+
+
+:root {
+  --bp-xs: 576px;
+  --bp-sm: 768px;
+  --bp-lg: 992px;
+  --bp-xl: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: 'SuisseIntl', sans-serif;
+}
+
+h1 {
+
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+ul {
+
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+body,div::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+section {
+  margin: 0 15px;
+}
+
+
+.border {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.container {
+  width: 100%;
+  float: left;
+  height: 100vh;
+  display: inline-block;
+  position: relative;
+}
+
+.container iframe {
+  width: 100%;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 15%;
+  float: left;
+  height: 100vh;
+  padding: 5px;
+  position: fixed;
+  display: none;
+}
+
+
+.sidebar-button {
+  margin-top: -25px;
+  float: right;
+  display: block;
+}
+
+.icon-bar {
+  display: block;
+  height: 4px;
+  margin-bottom: 3px;
+  width: 30px;
+  background-color: black;
+}
+
+.sidebar.open {
+  width: 97%;
+  padding: 0;
+  top: -12px;
+  position: fixed;
+  display: block;
+  height: inherit;
+  margin-top: 50px;
+  position: absolute;
+  background-color: white;
+}
+
+.sidebar ul li {
+  border-top: 3px solid black;
+}
+
+.sidebar ul li:last-child {
+  border-bottom: 3px solid black;
+}
+
+.sidebar ul li a {
+  color: #000;
+  font-size: 26px;
+  line-height: 30px;
+  padding-left: 0;
+  transition: padding .2s linear;
+}
+
+.sidebar ul li a.active {
+  transition: unset;
+  padding-left: 15px;
+}
+
+.sidebar ul li a:hover {
+  padding-left: 15px;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  padding: 5px 0;
+  background-color: white;
+  padding-right: 28px;
+}
+
+.navbar .brand {
+  overflow: hidden;
+}
+
+.navbar .brand h1 {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.navbar .locale {
+  width: 35px;
+  float: right;
+  display: none;
+  margin-left: 5px;
+  text-align: right;
+}
+
+.navbar .locale a {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+@media screen and (min-width: 992px) {
+
+  .sidebar-button {
+    display: none;
+  }
+
+  .container {
+    width: 85%;
+  }
+
+  .navbar {
+    width: 85%;
+  }
+
+  .sidebar {
+    display: inline-block;
+  }
+
+  .navbar .locale {
+    display: block;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+
+  .navbar {
+    width: 90%;
+  }
+
+  .sidebar {
+    width: 10%;
+  }
+}
+
+.content {
+  padding-top: 71px;
+}
+
+.content .next {
+  padding-top:6px;
+}
+
+.content .next h1 {
+  font-size: 18.2vw;
+  line-height: 15.2vw;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.home .info {
+  float: left;
+  width: 100%;
+  display: block;
+}
+
+.home .info h2 {
+  float: left;
+  font-size: 15vw;
+  line-height: 13vw;
+  text-align: left;
+}
+
+.home .more {
+  width: 100%;
+  display: flex;
+  font-size: 20px;
+}
+
+.home .date {
+  display: flex;
+}
+
+.home .date span {
+  font-size: 41px;
+  letter-spacing: -2px;
+}
+
+.home .date .day {
+  float: left;
+  width: 50%;
+  display: inline-block;
+}
+
+.home .date .time {
+  width: 50%;
+  float: right;
+  text-align: right;
+  display: inline-block;
+}
+
+.home .picture {
+  width: 100%;
+  min-height: 400px;
+  display: inline-block;
+  border: 3px solid black;
+  background-image: url(./Mauskovic.jpeg);
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .content .next h1 {
+    font-size: 18.5vw;
+    line-height: 15.5vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .content .next h1 {
+    font-size: 15.9vw;
+    line-height: 13.8vw;
+  }
+
+  .home .info {
+    width: 50%;
+    display: inline-block;
+    padding-right: 5px;
+  }
+
+.home .info h2 {
+  font-size: 6.8vw;
+  line-height: 5.8vw;
+  text-align: left;
+}
+
+  .home .picture {
+    width: 50%;
+    display: inline-block;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .content .next h1 {
+    font-size: 16.8vw;
+    line-height: 13.8vw;
+  }
+}
+
+.form {
+  float: left;
+  width: 100%;
+  display: block;
+}
+
+.form input {
+  font-size: 22px;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  border: 3px solid black;
+  background-color: transparent;
+}
+
+.form input.text {
+  min-width: 70%;
+}
+
+.form input.btn {
+  color: black;
+  border-radius: 90px;
+  min-width: 120px;
+}
+
+.form input.btn:hover {
+  color: white;
+  background-color: rgba(0,0,0,7);
+}
+
+.form textarea {
+  display: block;
+  font-size: 22px;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  border: 3px solid black;
+}
+
+.footer {
+  width: 100%;
+  display: block;
+  border-top: 3px solid black;
+}
+
+.footer .subscribe {
+  width: 100%;
+}
+
+.footer .subscribe .social {
+  width: 100%;
+  margin: 10px 0;
+  display: inline-block;
+}
+
+.footer .subscribe .social ul {
+  width: inherit;
+}
+
+.footer .subscribe .social ul li {
+  padding: 3px 0;
+  border-bottom: 3px solid black;
+}
+
+.footer .subscribe .social ul li:first-child {
+  border-top: 3px solid black;
+}
+
+.footer .subscribe .social ul li i {
+  font-size: 25px;
+}
+
+.footer .subscribe .social ul li a {
+  font-size: 26px;
+  line-height: 28px;
+  letter-spacing: -1px;
+  font-weight: 500;
+  transition: padding .2s linear;
+}
+
+.footer .subscribe .social ul li a:hover {
+  padding-left: 15px;
+}
+
+.footer p {
+  padding-top: 5px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.footer .rights {
+  padding-top: 3px;
+  border-top: 3px solid black;
+}
+
+.footer .left {
+  float: left;
+  width: 50%;
+}
+
+.footer .right {
+  width: 50%;
+  float: left;
+}
+
+.footer .subscribe {
+  display: block;
+  width: 100%;
+}
+
+.footer .subscribe.border {
+  border-bottom: none;
+}
+
+.footer .subscribe h5 {
+  font-size: 26px;
+  padding: 5px 0;
+  padding-bottom: 10px;
+}
+
+
+@media screen and (min-width: 992px) {
+
+  .footer .subscribe .social {
+    width: 50%;
+  }
+
+  .footer .subscribe .form {
+    width: 50%;
+    display: inline-block;
+  }
+}
+
+/***********/
+/* CONTACT */
+/***********/
+
+.contact {
+}
+
+.contact .info {
+  width: 20%;
+  float: left;
+  display: inline-block;
+}
+
+.contact .info h2 {
+  margin-right: 20px;
+  border-top: 3px solid black; 
+}
+
+.contact .form {
+  width: calc(80% - 40px);
+  margin-bottom: 250px;
+}
+
+.contact .form input.text {
+  width: 100%;
+}
+
+.contact .form textarea {
+  width: 100%;
+  min-height: 168px;
+}
+
+
+/***********/
+/*  ABOUT  */
+/***********/
+
+.menu {
+  width: 20%;
+  float: left;
+  position: fixed;
+  padding-right: 20px;
+  display: inline-block;
+}
+
+.menu ul li {
+  border-top: 3px solid black;
+}
+
+.menu ul li:last-child {
+  border-bottom: 3px solid black;
+}
+
+.menu ul li a {
+  color: #000;
+  font-size: 26px;
+  line-height: 30px;
+  padding-left: 0;
+  transition: padding .2s linear;
+}
+
+.menu ul li a.active {
+  animation: example .1s linear .1s infinite alternate;
+}
+
+.menu ul li a:hover {
+  padding-left: 15px;
+}
+
+.about-container {
+  float: left;
+  margin-left: 22.5%;
+  border-top: 3px solid black;
+  width: calc(80% - 40px);
+  display: inline-block;
+}
+
+.about-container .about p {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+
+.about-container .about img {
+  margin-top: 200px;
+  max-width: 100%;
+}
+
+.about-container .sponsors .logo {
+  display: inline-block;
+  width: 19%;
+}
+
+.about-container .sponsors .logo img {
+  max-height: 100px;
+}
+
+@keyframes example {
+  from {padding-left: 0px;}
+  to {padding-left: 3px;}
+}
+
+.artist table {
+  margin-bottom: 300px;
+}
+
+.artist table td {
+  vertical-align: top;
+}
+
+.artist table th span {
+  font-size: 18px;
+  text-align: left;
+}
+
+.artist table td span {
+  font-size: 26px;
+  text-align: left;
+}
+
+.artist table th span,
+.artist table td span {
+  width: 90%;
+  display: block;
+  border-top: 3px solid black;
+}
+
+
+.artist table td span.name {
+  width: 60%;
+}
+
+.artist table td span.artist-content {
+  max-height: 35px;
+  overflow: hidden;
+  transition: max-height .2s ease-in;
+}
+
+.artist table td span.artist-content:hover .polaroid {
+  display: block;
+}
+
+.artist table td .polaroid {
+  display: none;
+}
+
+.artist table td .polaroid img {
+  max-width: 300px;
+}
+
+
+/*
+.artist table td span.artist-content:hover {
+  max-height: 1000px;
+  background-color: red;
+}
+
+
+.artist table td span.month-day {
+
+}
+
+ {
+  max-height: 10px;
+  max-width: 100px;
+  display: none;
+  transition: max-height 3s linear;
+}
+
+*/
