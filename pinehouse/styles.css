@@ -539,9 +539,13 @@ section {
   max-width: 100%;
 }
 
+.about-container .sponsors {
+  padding-top: 50px;
+}
+
 .about-container .sponsors .logo {
   display: inline-block;
-  width: 19%;
+  width: 20%;
 }
 
 .about-container .sponsors .logo img {
