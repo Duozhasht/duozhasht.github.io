@@ -545,11 +545,11 @@ section {
 
 .about-container .sponsors .logo {
   display: inline-block;
-  width: 20%;
+  width: 45%;
 }
 
 .about-container .sponsors .logo img {
-  max-height: 100px;
+  max-width: 200px;
 }
 
 @keyframes example {
