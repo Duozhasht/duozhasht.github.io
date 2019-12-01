@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pinehouse Concerts</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'>
+  <meta http-equiv='Pragma' content='no-cache'>
+  <meta http-equiv='Expires' content='0'>
+  <!-- Cookie Cuttr -->
+  <link rel='stylesheet' type="text/css" href='./assets/cookiecuttr.css'></script>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet' crossorigin='anonymous'>
+  <link rel='stylesheet' type='text/css' href='./styles.css'>
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+  <script>window.jQuery || document.write("<script src='assets/js/libs/jquery-1.7.1.min.js'>\x3C/script>")</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  <script src="assets/jquery.cookiecuttr.js"></script>
+</head>
+<body>
+
+  <section id='home'>
+    <div class='container'>
+      <div class='navbar'>
+        <div class='locale border'>
+          <a href='#'>EN</a>
+        </div>
+        <div class='brand border'>
+          <h1><a href='index.html'>Pinehouse Concerts</a></h1>
+          <div id='sidebar-button' class='sidebar-button'>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </div>
+        </div>
+      </div>
+      <div class='content'>
+        <div class='next border'>
+          <h1>THIS WEEK</h1>
+        </div>
+        <div class='home'>
+          <div class='info'>
+            <div class='date border'>
+              <span class='day'>02.12</span>
+              <span class='time'>12PM</span>
+            </div>
+            <div class='name'>
+              <h2>TIM BERNARDES</h2>
+            </div>
+            <a href='#' class='more border'>More Info +</a>
+          </div>
+          <div class='picture'></div>
+        </div>
+      </div>
+      <div class='footer'>
+        <div class='subscribe'>
+          <div class='form'>
+            <form action="https://pinehouseconcerts.us4.list-manage.com/subscribe/post?u=272b5395f2fd6bbaeb28b6b7b&amp;id=a535559a8a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <h5>Subscribe for updates!</h5>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email address" required>
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn button">
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_272b5395f2fd6bbaeb28b6b7b_a535559a8a" tabindex="-1" value=""></div>
+            </form>
+          </div>
+          <div class='social'>
+            <ul>
+              <li>
+                <a target='_blank' href='https://www.facebook.com/pinehouseconcerts/'>
+                  <i class='fab fa-facebook-square'></i>
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a target='_blank' href='https://www.instagram.com/pinehouseconcerts/'>
+                  <i class='fab fa-instagram'></i>
+                  Instagram
+              </a>
+              </li>
+              <li>
+                <a target='_blank' href='https://www.youtube.com/channel/UCKrEOr1AAKq2X7I2QapOwwQ'>
+                  <i class='fab fa-youtube-square'></i>
+                  Youtube
+              </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class='rights'>
+          <div class='left'>
+            <p>© 2019 Pinehouse Concerts</p>
+          </div>
+          <div class='right'>
+            <p>by Chilli Pepper Fields</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='sidebar' class='sidebar'>
+      <ul>
+        <li><a href='./index.html'>Menu</a></li>
+        <li><a href='./about.html'>About Us</a></li>
+        <li><a href='./artists.html'>Artists</a></li>
+        <li><a href='./contact.html'>Contact</a></li>
+      </ul>
+    </div>
+  </section>
+</body>
+<!-- Mail Chimp -->
+<script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<script>
+
+$(document).ready(function () {
+  $.cookieCuttr();
+});
+
+if (jQuery.cookie('cc_cookie_accept') == "cc_cookie_accept") {
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+  _gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document. getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+}
+</script>
+
+<script type='text/javascript'>
+document.addEventListener('DOMContentLoaded', function(event) {
+  document.getElementById('sidebar-button').addEventListener('click', function () {
+    var sidebar = document.getElementById('sidebar');
+    if(sidebar.className.includes('open')) {
+      sidebar.className = 'sidebar';
+    } else {
+      sidebar.className= 'sidebar open';
+    }
+  });
+
+
+
+})
+</script>
+
+</html>

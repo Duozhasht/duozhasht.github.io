@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pinehouse Concerts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' type='text/css' href='./styles.css'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet' crossorigin='anonymous'>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <section id='about'>
+    <div class='container'>
+      <div class='navbar'>
+        <div class='locale border'>
+          <a href='#'>EN</a>
+        </div>
+        <div class='brand border'>
+          <h1><a href='./'>Pinehouse Concerts</a></h1>
+          <div id='sidebar-button' class='sidebar-button'>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </div>
+        </div>
+      </div>
+      <div class='content'>
+        <div class='menu'>
+          <ul>
+            <li class='active'>
+              <a href="./about.html" id='scrollTop'>Who Are We?</a>
+            </li>
+            <li>
+              <a href='#team'>Our Team</a>
+            </li>
+            <li>
+              <a href='#sponsors'>Sponsors</a>
+            </li>
+          </ul>
+        </div>
+        <div class='about'>
+          <div id='description' class='description'>
+            <p style='margin-bottom: 10px;'>Pinehouse Concerts is an independent music platform.</p>
+            <p>
+              A nonprofit cultural organizational that pursuits a unique view in our curatorship. Recorded in a wooden warm coloured room filled with old frames, Pinehouse Concerts is a special place that truly feels like home.
+            </p>
+            <img src='./assets/img/about.jpg'>
+          </div>
+          <div id='team' class='team'>
+            <dl>
+              <dt>Executive Producer</dt>
+              <dd>Victor Butuc</dd>
+            </dl>
+            <dl>
+              <dt>Production</dt>
+              <dd>João Pedro Silva</dd>
+            </dl>
+            <dl>
+              <dt>Communication</dt>
+              <dd>Catarina Soares</dd>
+            </dl>
+            <dl>
+              <dt>Video and Art</dt>
+              <dd>Luís Costa</dd>
+              <dd>Miguel da Santa</dd>
+            </dl>
+            <dl>
+              <dt>Video Assistant</dt>
+              <dd>Sofia Frideloux</dd>
+            </dl>
+            <dl>
+              <dt>Audio Engineer</dt>
+              <dd>Andrés Malta</dd>
+            </dl>
+            <dl>
+              <dt>Audio Engineer Assistant</dt>
+              <dd>Rolando Babo</dd>
+            </dl>
+            <dl>
+              <dt>Photography</dt>
+              <dd>Sofia Frideloux</dd>
+              <dd>Rafael Farias</dd>
+            </dl>
+            <dl>
+              <dt>Graphic Design</dt>
+              <dd>Avelino Resende</dd>
+            </dl>
+          </div>
+          <div id='sponsors' class='sponsors'>
+            <div class='logo'>
+              <img src='./assets/img/sponsors/cimbalino.png'>
+            </div>
+            <div class='logo'>
+              <img src='./assets/img/sponsors/omnisonic.png'>
+            </div>
+            <div class='logo'>
+              <img src='./assets/img/sponsors/sontronics.png'>
+            </div>
+            <div class='logo'>
+              <img src='./assets/img/sponsors/olhar_de_ulisses.png'>
+            </div>
+            <div class='logo'>
+              <img src='./assets/img/sponsors/universal-audio.png'>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='footer'>
+        <div class='subscribe'>
+          <div class='form'>
+            <h5>Subscribe for updates!</h5>
+            <input class='text' type='text' name='email' placeholder='Email Address'>
+            <input class='btn' type='submit' name='Submit'>
+          </div>
+          <div class='social'>
+            <ul>
+              <li>
+                <a target='_blank' href='https://www.facebook.com/pinehouseconcerts/'>
+                  <i class='fab fa-facebook-square'></i>
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a target='_blank' href='https://www.instagram.com/pinehouseconcerts/'>
+                  <i class='fab fa-instagram'></i>
+                  Instagram
+              </a>
+              </li>
+              <li>
+                <a target='_blank' href='https://www.youtube.com/channel/UCKrEOr1AAKq2X7I2QapOwwQ'>
+                  <i class='fab fa-youtube-square'></i>
+                  Youtube
+              </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class='rights'>
+          <div class='left'>
+            <p>© 2019 Pinehouse Concerts</p>
+          </div>
+          <div class='right'>
+            <p>by Chilli Pepper Fields</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='sidebar' class='sidebar'>
+      <ul>
+        <li><a href='./index.html'>Menu</a></li>
+        <li><a href='./about.html'>About Us</a></li>
+        <li><a href='./artists.html'>Artists</a></li>
+        <li><a href='./contact.html'>Contact</a></li>
+      </ul>
+    </div>
+  </section>
+
+<script type='text/javascript'>
+document.addEventListener('DOMContentLoaded', function(event) {
+  document.getElementById('sidebar-button').addEventListener('click', function () {
+    var sidebar = document.getElementById('sidebar');
+    if(sidebar.className.includes('open')) {
+      sidebar.className = 'sidebar';
+    } else {
+      sidebar.className= 'sidebar open';
+    }
+  });
+
+  document.getElementById('scrollTop').addEventListener('click', function() {
+    window.scrollTo(0,0)
+  });
+
+})
+</script>
+
+</body>
+</html>

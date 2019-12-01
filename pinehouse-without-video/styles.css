@@ -1,0 +1,956 @@
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('./fonts/SuisseIntl-Regular-WebM.woff') format('woff'),
+       url('./fonts/SuisseIntl-Regular-WebM.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-Light';
+  src: url('./fonts/SuisseIntl-Light-WebM.woff') format('woff'),
+       url('./fonts/SuisseIntl-Light-WebM.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-Regular';
+  src: url('./fonts/SuisseIntl-Regular-WebM.woff') format('woff'),
+       url('./fonts/SuisseIntl-Regular-WebM.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-Medium';
+  src: url('./fonts/SuisseIntl-Medium-WebM.woff') format('woff'),
+       url('./fonts/SuisseIntl-Medium-WebM.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-SemiBold';
+  src: url('./fonts/SuisseIntl-SemiBold-WebM.woff') format('woff'),
+       url('./fonts/SuisseIntl-SemiBold-WebM.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-Bold';
+  src: url('./fonts/SuisseIntl-Bold-WebM.woff') format('woff'),
+       url('./fonts/SuisseIntl-Bold-WebM.woff2') format('woff2');
+}
+
+
+:root {
+  --bp-xs: 576px;
+  --bp-sm: 768px;
+  --bp-lg: 992px;
+  --bp-xl: 1200px;
+}
+
+:focus {
+  outline: #000 auto 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: 'SuisseIntl', sans-serif;
+}
+
+h1 {
+
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+ul {
+
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+body,div::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+section {
+  margin: 0 5px;
+}
+
+@media screen and (min-width:992px) {
+  section {
+    margin: 0 15px;
+  }
+}
+
+
+.border {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.container {
+  width: 100%;
+  float: left;
+  height: 100vh;
+  display: inline-block;
+  position: relative;
+}
+
+.sidebar {
+  width: 15%;
+  float: left;
+  height: 100vh;
+  padding: 5px;
+  position: fixed;
+  display: none;
+  z-index: 99;
+}
+
+.sidebar-button {
+  margin-top: -26px;
+  float: right;
+  display: block;
+  margin-right: 1px;
+}
+
+.icon-bar {
+  display: block;
+  height: 4px;
+  margin-bottom: 3px;
+  width: 30px;
+  background-color: black;
+}
+
+.sidebar.open {
+  width: 100%;
+  padding: 0;
+  top: -10px;
+  position: fixed;
+  display: block;
+  height: inherit;
+  margin-top: 50px;
+  background-color: white;
+  padding-right: 10px;
+}
+
+.sidebar.open ul li:first-child {
+  display: none;
+}
+
+.sidebar ul li {
+  border-top: 3px solid black;
+}
+
+.sidebar ul li:last-child {
+  border-bottom: 3px solid black;
+}
+
+.sidebar ul li a {
+  color: #000;
+  font-weight: 700;
+  padding-left: 0;
+  font-size: 26px;
+  line-height: 32px;
+  transition: padding .2s linear;
+}
+
+.sidebar ul li a.active {
+  transition: unset;
+  padding-left: 15px;
+}
+
+.sidebar ul li a:hover {
+  padding-left: 15px;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  padding: 5px 0;
+  background-color: white;
+  padding-right: 10px;
+  z-index: 99;
+}
+
+.navbar .brand {
+  overflow: hidden;
+}
+
+.navbar .brand h1 {
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.navbar .locale {
+  width: 35px;
+  float: right;
+  display: none;
+  margin-left: 5px;
+  text-align: right;
+}
+
+.navbar .locale a {
+  font-size: 26px;
+  line-height: 32px;
+}
+
+@media screen and (min-width: 992px) {
+
+  .sidebar.open {
+    padding-right: 10px;
+  }
+
+  .sidebar-button {
+    display: none;
+  }
+
+  .container {
+    width: 85%;
+  }
+
+  .navbar {
+    width: 85%;
+    padding-right: 30px;
+  }
+
+  .sidebar {
+    display: inline-block;
+  }
+
+  .navbar .locale {
+    display: block;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+
+  .navbar {
+    width: 90%;
+  }
+
+  .sidebar {
+    width: 10%;
+  }
+}
+
+.content {
+  padding-top: 52px;
+}
+
+#about .content {
+  padding-top: 48px;
+}
+
+.content .next {
+}
+
+.content .next.border {
+  border: none;
+}
+
+.content .next h1 {
+  font-family: 'SuisseIntl-Light', sans-serif;
+  font-size: 19.5vw;
+  line-height: 15.2vw;
+  font-weight: 200;
+  letter-spacing: -2px;
+}
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 0;
+}
+
+.home .info {
+  float: left;
+  width: 100%;
+  display: block;
+}
+
+.home .info .name {
+
+}
+
+.home .info h2 {
+  float: left;
+  font-family: 'SuisseIntl-Regular';
+  font-size: 15vw;
+  line-height: 14vw;
+  text-align: left;
+  padding: 5px;
+}
+
+.home .more {
+  width: 100%;
+  display: flex;
+  font-size: 20px;
+}
+
+.home .date {
+  display: flex;
+}
+
+.home .date span {
+  font-size: 41px;
+  letter-spacing: -2px;
+}
+
+.home .date .day {
+  float: left;
+  width: 50%;
+  display: inline-block;
+}
+
+.home .date .time {
+  width: 50%;
+  float: right;
+  text-align: right;
+  display: inline-block;
+}
+
+.home .picture {
+  width: 100%;
+  margin-top: 5px;
+  min-height: 340px;
+  display: inline-block;
+  border-radius: 7px;
+  background-image: url(./assets/img/main.jpg);
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .content .next h1 {
+    font-size: 19.5vw;
+    line-height: 13.5vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  .content {
+    padding-top: 75px;
+  }
+
+  .content .next.border {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black; 
+  }
+
+
+  .content .next h1 {
+    padding-top: 12px;
+    font-size: 15.9vw;
+    line-height: 13.8vw;
+  }
+
+  .home {
+    margin: 50px 0;
+  }
+
+  .home .info {
+    width: 50%;
+    display: inline-block;
+    padding-right: 5px;
+  }
+
+  .home .info h2 {
+    font-size: 6.8vw;
+    line-height: 5.8vw;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+
+  .home .info .name {
+    min-height: 320px;
+    position: relative;
+  }
+
+  .home .picture {
+    width: 50%;
+    margin: 0;
+    display: inline-block;
+  }
+
+  #about .content {
+    padding-top: 75px;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .content .next h1 {
+    font-size: 18vw;
+    line-height: 14vw;
+    letter-spacing: -8px;
+  }
+}
+
+.form {
+  float: left;
+  width: 100%;
+  display: block;
+}
+
+.form input {
+  font-size: 22px !important;
+  padding: 5px 15px !important;
+  margin-bottom: 5px !important;
+  border: 3px solid black !important;
+  background-color: transparent !important;
+}
+
+.form input.text {
+  min-width: 70%;
+}
+
+.form input.btn {
+  color: black !important;
+  min-width: 120px !important;
+}
+
+.form input.btn:hover {
+  color: white;
+  background-color: rgba(0,0,0,7);
+}
+
+.form textarea {
+  display: block;
+  font-size: 22px;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  border: 3px solid black;
+}
+
+.footer {
+  width: 100%;
+  display: block;
+  border-top: 3px solid black;
+}
+
+.footer .subscribe {
+  width: 100%;
+}
+
+.footer .subscribe .social {
+  width: 100%;
+  margin: 10px 0;
+  display: inline-block;
+}
+
+.footer .subscribe .social ul {
+  width: inherit;
+}
+
+.footer .subscribe .social ul li {
+  padding: 3px 0;
+  border-bottom: 3px solid black;
+}
+
+.footer .subscribe .social ul li:first-child {
+  border-top: 3px solid black;
+}
+
+.footer .subscribe .social ul li i {
+  font-size: 25px;
+}
+
+.footer .subscribe .social ul li a {
+  font-size: 26px;
+  line-height: 28px;
+  letter-spacing: -1px;
+  font-family: 'SuisseIntl-Regular';
+  transition: padding .2s linear;
+}
+
+.footer .subscribe .social ul li a:hover {
+  padding-left: 15px;
+}
+
+.footer p {
+  padding-top: 5px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.footer .rights {
+  padding-top: 3px;
+  margin-bottom: 10px;
+  border-top: 3px solid black;
+}
+
+.footer .left {
+  float: left;
+  width: 50%;
+}
+
+.footer .right {
+  width: 50%;
+  float: left;
+}
+
+.footer .subscribe {
+  display: block;
+  width: 100%;
+}
+
+.footer .subscribe .form input.text {
+  min-width: 60%;
+  max-width: 60%;
+}
+
+.footer .subscribe.border {
+  border-bottom: none;
+}
+
+.footer .subscribe h5 {
+  font-size: 26px;
+  font-weight: 600;
+  padding: 5px 0;
+  padding-bottom: 10px;
+}
+
+
+@media screen and (min-width: 992px) {
+
+  .footer .subscribe .social {
+    width: 50%;
+  }
+
+  .footer .subscribe .form {
+    width: 50%;
+    display: inline-block;
+  }
+}
+
+/***********/
+/* CONTACT */
+/***********/
+
+.contact {
+}
+
+.contact .info {
+  width: 100%;
+  float: left;
+  display: inline-block;
+}
+
+.contact .info h2 {
+  border-top: 3px solid black; 
+  border-bottom: 3px solid black;
+  margin-bottom: 5px;
+}
+
+.contact .form {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.contact .form input.text {
+  width: 100%;
+}
+
+.contact .form textarea {
+  width: 100%;
+  min-height: 168px;
+}
+
+@media screen and (min-width: 992px) {
+
+  .contact .info {
+    width: 20%;
+  }
+
+  .contact .info h2 {
+    margin-right: 20px;
+    border-top: 3px solid black; 
+    border-bottom: none;
+  }
+
+  .contact .form {
+    width: calc(80% - 40px);
+    margin-bottom: 250px;
+  }
+
+
+}
+
+/***********/
+/*  ABOUT  */
+/***********/
+
+.menu {
+  width: 100%;
+  float: left;
+  position: fixed;
+  padding-bottom: 5px;
+  display: inline-block;
+  background-color: white;
+}
+
+.menu ul li {
+  display: none;
+  border-bottom: 3px solid black;
+}
+
+.menu ul li:last-child {
+  border-bottom: 3px solid black;
+}
+
+.menu ul li {
+}
+
+.menu ul li.active {
+  display: block;
+}
+
+.menu ul li a {
+  color: #000;
+  font-size: 26px;
+  line-height: 32px;
+  padding-left: 0;
+  transition: padding .2s linear;
+}
+
+.menu ul li a.active {
+  animation: example .1s linear .1s infinite alternate;
+}
+
+.menu ul li a:hover {
+  padding-left: 15px;
+}
+
+.about {
+  float: left;
+  display: block;
+  margin-top: 33px;
+  padding-right: 10px;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.about .description {
+  width: 100%;
+  padding-top: 4px;
+}
+
+.about .description p {
+  font-size: 37px;
+  font-weight: 500;
+  line-height: 45px;
+  font-family: 'SuisseIntl-medium';
+}
+
+.about .description img {
+  max-width: 100%;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.about .sponsors {
+  min-height: 90vh;
+  padding-top: 40px;
+}
+
+.about .sponsors .logo {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.about .sponsors .logo img {
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.about .team {
+  min-height: 95vh;
+  padding: 65px 0;
+}
+
+.about .team dl {
+  width: 100%;
+  float: left;
+  margin-right: 10%;
+  padding-bottom: 20px;
+  display: inline-block;
+}
+
+.about .team dl dt {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.about .team dl dd {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 992px) {
+
+  .menu {
+    width: 20%;
+  }
+
+  .menu ul li {
+    border-top: 3px solid black;
+    border-bottom: none;
+    display: block;
+  }
+
+  .about {
+    margin-top: 0;
+    display: inline-block;
+    margin-left: calc(25%);
+    width: calc(75.5%);
+  }
+
+  .about .description {
+    padding-top: 0;
+    border-top: 3px solid black;
+  }
+
+  .about .team dl {
+    width: 30%;
+    margin-right: 5%;
+  }
+
+  .about .sponsors .logo {
+    width: 45%;
+    text-align: left;
+  }
+
+}
+
+@keyframes example {
+  from {padding-left: 0px;}
+  to {padding-left: 3px;}
+}
+
+.artist {
+  min-height: 50vh;
+  margin-bottom: 30px;
+}
+
+.artist table {
+  table-layout: fixed;
+}
+
+.artist table td {
+  vertical-align: top;
+}
+
+.artist table th span {
+  font-size: 18px;
+  text-align: left;
+}
+
+.artist table td span {
+  font-size: 26px;
+  text-align: left;
+}
+
+.artist table th span,
+.artist table td span {
+  width: 90%;
+  display: block;
+  border-top: 3px solid black;
+}
+
+.artist table td span:last-child {
+}
+
+.artist table th span.artist-content {
+  width: 100%;
+  transition: padding .2s linear;
+}
+
+.artist table td span.artist-content {
+  width: 100%;
+  cursor: pointer;
+  max-height: 40px;
+  overflow: hidden;
+  transition: max-height .6s ease-in;
+}
+
+.artist table th.artist-year {
+  display: none;
+  width: 10%;
+}
+
+.artist table th.artist-year span {
+  font-size: 26px;
+  line-height: 26px;
+  padding-top: 5px;
+  height: 27px;
+}
+
+
+
+.artist table td.artist-year {
+  display: none;
+}
+
+.artist table th.month-day {
+  width: 20%;
+}
+
+.artist table td span.artist-content.open {
+  max-height: 1000px;
+}
+
+.artist table td span.artist-content .name {
+  font-size: 26px;
+}
+
+
+.artist table td span.artist-content .video {
+  max-height: 30px;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height .4s ease-in;
+}
+
+.artist table td span.artist-content .video:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.artist table td span.artist-content .video.open {
+  max-height: 340px;
+  height: 30px;
+}
+
+.artist table td span.artist-content.open .video.open {
+  /*overflow: unset;*/
+}
+
+.artist table td span.artist-content .video iframe {
+  display: none;
+  width: 100%;
+  height: 0;
+}
+
+.artist table td span.artist-content .photos {
+  position: relative;
+  width: 100%;
+  max-height: 30px;
+  overflow: hidden;
+  transition: max-height .4s ease-in;
+}
+
+
+.artist table td span.artist-content .photos-container {
+  max-width: 100%;
+  display: none;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.artist table td span.artist-content .photos h5 {
+}
+
+.artist table td span.artist-content .photos {
+  max-height: 335px;
+  height: 30px;
+}
+
+.artist table td span.artist-content .photos:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.artist table td span.artist-content .photos img {
+}
+
+.artist table td span.artist-content .photos img {
+  height: 300px;
+  display: inline-block;
+  overflow: scroll;
+}
+
+.artist table td .social {
+  width: 100%;
+}
+
+.artist table td .polaroid {
+  top: 63px;
+  right: 11%;
+  width: 300px;
+  border: none;
+  display: none;
+  position: fixed;
+}
+
+.artist table td .polaroid img {
+  float: right;
+  max-width: 300px;
+}
+
+@media screen and (min-width: 992px) {
+  .artist table td .artist-content .name:hover ~ .polaroid {
+    display: block;
+  }
+
+  .artist table th.artist-year {
+    display: table-cell;
+    width: 20%;
+  }
+
+  .artist table td.artist-year {
+    display: table-cell;
+    width: 20%;
+  }
+
+  .artist table th.month-day {
+    width: 10%;
+  }
+
+  .artist table th span.artist-content {
+    width: 65%;
+  }
+
+  .artist table td span.artist-content {
+    width: 65%;
+  }
+
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

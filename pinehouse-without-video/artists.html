@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pinehouse Concerts</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' href='./styles.css'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet' crossorigin='anonymous'>
+  <meta charset="utf-8">
+</head>
+
+<script type='text/javascript'>
+document.addEventListener('DOMContentLoaded', function(event) {
+  document.getElementById('sidebar-button').addEventListener('click', function () {
+    var sidebar = document.getElementById('sidebar');
+    if(sidebar.className.includes('open')) {
+      sidebar.className = 'sidebar';
+    } else {
+      sidebar.className= 'sidebar open';
+    }
+  });
+
+  let artists = document.getElementsByClassName('artist-content');
+  let concerts = document.getElementsByClassName('video');
+  let photos = document.getElementsByClassName('photos');
+  let social = document.getElementsByClassName('social');
+
+
+  for (var i = 0; i < artists.length; i++) {
+    artists[i].addEventListener('click', function(event) {
+      if(event.currentTarget.className.includes('open')) {
+        event.currentTarget.className = 'artist-content';
+      } else {
+        for (var i = 0; i < artists.length; i++) {
+          artists[i].className = 'artist-content'
+        }
+        event.currentTarget.className = 'artist-content open';
+      }
+    })
+  }
+
+  for (var i = 0; i < concerts.length; i++) {
+    concerts[i].addEventListener('click', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      if(event.currentTarget.className.includes('open')) {
+        event.currentTarget.className = 'video';
+        event.currentTarget.nextElementSibling.className = 'photos open';
+      } else {
+        event.currentTarget.className = 'video open';
+        event.currentTarget.nextElementSibling.className = 'photos';
+      }
+    })
+  }
+
+
+  for (var i = 0; i < photos.length; i++) {
+    photos[i].addEventListener('click', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      if(event.currentTarget.className.includes('open')) {
+        event.currentTarget.className = 'photos';
+        event.currentTarget.previousElementSibling.className = 'video open';
+      } else {
+        event.currentTarget.className = 'photos open';
+        event.currentTarget.previousElementSibling.className = 'video';
+      }
+    })
+  }
+
+
+  for (var i = 0; i < social.length; i++) {
+    social[i].addEventListener('click', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      window.open(event.target.parentElement.href, "_blank");
+    })
+  }
+
+/*
+  fetch('https://api.airtable.com/v0/app2rQWaKFoyC6mHb/Artists', {
+    headers: {
+      "Authorization": "Bearer keyV5iKOIrgTYGYms"
+    }
+  })
+    .then(function(response) {
+      console.log(response);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+*/
+
+})
+</script>
+
+<body>
+
+  <section id='home'>
+    <div class='container'>
+      <div class='navbar'>
+        <div class='locale border'>
+          <a href='#'>EN</a>
+        </div>
+        <div class='brand border'>
+          <h1><a href='index.html'>Pinehouse Concerts</a></h1>
+          <div id='sidebar-button' class='sidebar-button'>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </div>
+        </div>
+      </div>
+      <div class='content'>
+        <div class='artist'>
+          <table style='width:100%'>
+            <tr>
+              <th class='artist-year'><span>2019</span></th>
+              <th class='month-day'><span>Date</span></th>
+              <th><span class='artist-content'>Artist</span></th>
+            </tr>
+            <tr>
+              <td class='artist-year'></td>
+              <td><span class='month-day'>01.12</span></td>
+              <td>
+                <span class='artist-content'>
+                  <h5 class='name'>Tim Bernardes</h5>
+                  <span class='video open'>
+                    <h5>Concert</h5>
+                    <iframe src="https://www.youtube.com/embed/mfRj60-MpRU?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </span>
+                  <span class='photos'>
+                    <h5>Photos</h5>
+                    <div class='photos-container'>
+                      <img src='./assets/img/photos/2.jpg'>
+                      <img src='./assets/img/photos/3.jpg'>
+                      <img src='./assets/img/photos/4.jpg'>
+                      <img src='./assets/img/photos/5.jpg'>
+                      <img src='./assets/img/photos/6.jpg'>
+                      <img src='./assets/img/photos/7.jpg'>
+                      <img src='./assets/img/photos/8.jpg'>
+                      <img src='./assets/img/photos/9.jpg'>
+                    </div>
+                  </span>
+                  <span class='social'>
+                    <a target='_blank' href='https://www.facebook.com/timbernardesoficial/'>
+                      <i class='fab fa-facebook-square'></i>
+                    </a>
+                    <a target='_blank' href='https://www.instagram.com/timbernardes/?hl=en'>
+                      <i class='fab fa-instagram'></i>
+                    </a>
+                    <a target='_blank' href='https://www.youtube.com/channel/UCXed77D3XmIDrFOIaUtrcvg'>
+                      <i class='fab fa-youtube-square'></i>
+                    </a>
+
+                  </span>
+                  <span class='polaroid'>
+                    <img src='./assets/img/polaroids/timbernardes_polaroid.png'>
+                  </span>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class='footer'>
+        <div class='subscribe'>
+          <div class='form'>
+            <h5>Subscribe for updates!</h5>
+            <input class='text' type='text' name='email' placeholder='Email Address'>
+            <input class='btn' type='submit' name='Submit'>
+          </div>
+          <div class='social'>
+            <ul>
+              <li>
+                <a target='_blank' href='https://www.facebook.com/pinehouseconcerts/'>
+                  <i class='fab fa-facebook-square'></i>
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a target='_blank' href='https://www.instagram.com/pinehouseconcerts/'>
+                  <i class='fab fa-instagram'></i>
+                  Instagram
+              </a>
+              </li>
+              <li>
+                <a target='_blank' href='https://www.youtube.com/channel/UCKrEOr1AAKq2X7I2QapOwwQ'>
+                  <i class='fab fa-youtube-square'></i>
+                  Youtube
+              </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class='rights'>
+          <div class='left'>
+            <p>© 2019 Pinehouse Concerts</p>
+          </div>
+          <div class='right'>
+            <p>by Chilli Pepper Fields</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='sidebar' class='sidebar'>
+      <ul>
+        <li><a href='./index.html'>Menu</a></li>
+        <li><a href='./about.html'>About Us</a></li>
+        <li><a href='./artists.html'>Artists</a></li>
+        <li><a href='./contact.html'>Contact</a></li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>
+
+        <!--
+        <iframe src='https://www.youtube.com/embed/mfRj60-MpRU' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+        <-->
