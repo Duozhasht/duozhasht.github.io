@@ -2,11 +2,12 @@
 <html>
 <head>
   <title>Pinehouse Concerts</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' href='./styles.css'>
   <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet' crossorigin='anonymous'>
 </head>
 
-<script type="text/javascript">
+<script type='text/javascript'>
 document.addEventListener('DOMContentLoaded', function(event) {
   document.getElementById('sidebar-button').addEventListener('click', function () {
     var sidebar = document.getElementById('sidebar');
@@ -28,54 +29,52 @@ document.addEventListener('DOMContentLoaded', function(event) {
           <a href='#'>EN</a>
         </div>
         <div class='brand border'>
-          <h1><a href="index.html">Pinehouse Concerts</a></h1>
+          <h1><a href='index.html'>Pinehouse Concerts</a></h1>
           <div id='sidebar-button' class='sidebar-button'>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
           </div>
         </div>
       </div>
       <div class='content'>
         <div class='artist'>
-          <table style="width:100%">
+          <table style='width:100%'>
             <tr>
               <th><span>2019</span></th>
               <th><span>Date</span></th>
-              <th><span>Artist</span></th>
+              <th><span class='name'>Artist</span></th>
             </tr>
             <tr>
               <td></td>
-              <td><span class='month-day' >01.01</span></td>
+              <td><span class='month-day'>01.01</span></td>
               <td>
-                <span class='artist-content'>
-                  <div class='name'>Conjunto Corona</span>
-                </span>
-              </td>
-              <td>
+                <span class='name'>Conjunto Corona</span>
                 <span class='polaroid'>
                     <img src='./assets/img/polaroids/ph_polaroids15.jpg'>
                 </span>
               </td>
+              <td>
+              </td>
             </tr>
             <tr>
               <td></td>
-              <td><span class='month-day' >07.01</span></td>
+              <td><span class='month-day'>07.01</span></td>
               <td><span class='name'>Julius Gabriel</span></td>
             </tr>
             <tr>
               <td></td>
-              <td><span class='month-day' >12.02</span></td>
+              <td><span class='month-day'>12.02</span></td>
               <td><span class='name'>Legendary Tiger Man</span></td>
             </tr>
             <tr>
               <td></td>
-              <td><span class='month-day' >21.03</span></td>
+              <td><span class='month-day'>21.03</span></td>
               <td><span class='name'>Octopussy</span></td>
             </tr>
             <tr>
               <td></td>
-              <td><span class='month-day' >01.04</span></td>
+              <td><span class='month-day'>01.04</span></td>
               <td><span class='name'>Sensible Soccers</span></td>
             </tr>
           </table>
@@ -125,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       <ul>
         <li><a href='/pinehouse'>Menu</a></li>
         <li><a href='./about.html'>About Us</a></li>
-        <li><a href='./artists.html'>Artists</a></li>
+        <li><a href='./artists.html' class='active'>Artists</a></li>
         <li><a href='./contact.html'>Contact</a></li>
       </ul>
     </div>
