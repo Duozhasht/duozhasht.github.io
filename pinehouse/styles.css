@@ -1,13 +1,37 @@
 @font-face {
   font-family: 'SuisseIntl';
-  src: url('./fonts/fonts/SuisseIntl-Regular-WebM.woff') format('woff'),
-       url('./fonts/fonts/SuisseIntl-Regular-WebM.woff2') format('woff2'),
+  src: url('./fonts/SuisseIntl-Regular-WebM.woff') format('woff'),
+       url('./fonts/SuisseIntl-Regular-WebM.woff2') format('woff2');
+}
 
-       url('./fonts/fonts/SuisseIntl-SemiBold-WebM.woff') format('woff'),
-       url('./fonts/fonts/SuisseIntl-SemiBold-WebM.woff2') format('woff2'),
+@font-face {
+  font-family: 'SuisseIntl-Light';
+  src: url('./fonts/SuisseIntl-Light-WebM.woff') format('woff'),
+       url('./fonts/SuisseIntl-Light-WebM.woff2') format('woff2');
+}
 
-       url('./fonts/fonts/SuisseIntl-Bold-WebM.woff') format('woff'),
-       url('./fonts/fonts/SuisseIntl-Bold-WebM.woff2') format('woff2');
+@font-face {
+  font-family: 'SuisseIntl-Regular';
+  src: url('./fonts/SuisseIntl-Regular-WebM.woff') format('woff'),
+       url('./fonts/SuisseIntl-Regular-WebM.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-Medium';
+  src: url('./fonts/SuisseIntl-Medium-WebM.woff') format('woff'),
+       url('./fonts/SuisseIntl-Medium-WebM.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-SemiBold';
+  src: url('./fonts/SuisseIntl-SemiBold-WebM.woff') format('woff'),
+       url('./fonts/SuisseIntl-SemiBold-WebM.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SuisseIntl-Bold';
+  src: url('./fonts/SuisseIntl-Bold-WebM.woff') format('woff'),
+       url('./fonts/SuisseIntl-Bold-WebM.woff2') format('woff2');
 }
 
 
@@ -16,6 +40,10 @@
   --bp-sm: 768px;
   --bp-lg: 992px;
   --bp-xl: 1200px;
+}
+
+:focus {
+  outline: #000 auto 5px;
 }
 
 * {
@@ -82,11 +110,6 @@ section {
   position: relative;
 }
 
-.container iframe {
-  width: 100%;
-  height: 100vh;
-}
-
 .sidebar {
   width: 15%;
   float: left;
@@ -94,12 +117,14 @@ section {
   padding: 5px;
   position: fixed;
   display: none;
+  z-index: 99;
 }
 
 .sidebar-button {
-  margin-top: -25px;
+  margin-top: -26px;
   float: right;
   display: block;
+  margin-right: 1px;
 }
 
 .icon-bar {
@@ -136,9 +161,10 @@ section {
 
 .sidebar ul li a {
   color: #000;
+  font-weight: 700;
+  padding-left: 0;
   font-size: 26px;
   line-height: 32px;
-  padding-left: 0;
   transition: padding .2s linear;
 }
 
@@ -157,6 +183,7 @@ section {
   padding: 5px 0;
   background-color: white;
   padding-right: 10px;
+  z-index: 99;
 }
 
 .navbar .brand {
@@ -228,8 +255,12 @@ section {
   padding-top: 52px;
 }
 
+#about .content {
+  padding-top: 48px;
+}
+
 .content .next {
-  padding-top:6px;
+  padding-top: 12px;
 }
 
 .content .next.border {
@@ -237,16 +268,17 @@ section {
 }
 
 .content .next h1 {
-  font-size: 18.2vw;
+  font-family: 'SuisseIntl-Light', sans-serif;
+  font-size: 19.5vw;
   line-height: 15.2vw;
-  font-weight: 500;
+  font-weight: 200;
   letter-spacing: -2px;
 }
 
 .home {
   display: flex;
   flex-wrap: wrap;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 .home .info {
@@ -255,11 +287,17 @@ section {
   display: block;
 }
 
+.home .info .name {
+
+}
+
 .home .info h2 {
   float: left;
+  font-family: 'SuisseIntl-Regular';
   font-size: 15vw;
-  line-height: 13vw;
+  line-height: 14vw;
   text-align: left;
+  padding: 5px;
 }
 
 .home .more {
@@ -292,17 +330,18 @@ section {
 
 .home .picture {
   width: 100%;
-  min-height: 400px;
+  margin-top: 5px;
+  min-height: 340px;
   display: inline-block;
-  border: 3px solid black;
-  background-image: url(./Mauskovic.jpeg);
+  border-radius: 7px;
+  background-image: url(./assets/img/main.jpg);
   background-size: cover;
 }
 
 @media screen and (min-width: 768px) {
   .content .next h1 {
-    font-size: 18.5vw;
-    line-height: 15.5vw;
+    font-size: 19.5vw;
+    line-height: 13.5vw;
   }
 }
 
@@ -323,29 +362,47 @@ section {
     line-height: 13.8vw;
   }
 
+  .home {
+    margin: 50px 0;
+  }
+
   .home .info {
     width: 50%;
     display: inline-block;
     padding-right: 5px;
   }
 
-.home .info h2 {
-  font-size: 6.8vw;
-  line-height: 5.8vw;
-  text-align: left;
-}
+  .home .info h2 {
+    font-size: 6.8vw;
+    line-height: 5.8vw;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+
+  .home .info .name {
+    min-height: 320px;
+    position: relative;
+  }
 
   .home .picture {
     width: 50%;
     display: inline-block;
   }
 
+  #about .content {
+    padding-top: 75px;
+  }
+
 }
 
 @media screen and (min-width: 1200px) {
   .content .next h1 {
-    font-size: 16.8vw;
-    line-height: 13.8vw;
+    font-size: 18.2vw;
+    line-height: 14vw;
+    letter-spacing: -8px;
   }
 }
 
@@ -369,7 +426,6 @@ section {
 
 .form input.btn {
   color: black;
-  border-radius: 90px;
   min-width: 120px;
 }
 
@@ -423,7 +479,7 @@ section {
   font-size: 26px;
   line-height: 28px;
   letter-spacing: -1px;
-  font-weight: 500;
+  font-weight: 600;
   transition: padding .2s linear;
 }
 
@@ -439,6 +495,7 @@ section {
 
 .footer .rights {
   padding-top: 3px;
+  margin-bottom: 10px;
   border-top: 3px solid black;
 }
 
@@ -457,12 +514,18 @@ section {
   width: 100%;
 }
 
+.footer .subscribe .form input.text {
+  min-width: 60%;
+  max-width: 60%;
+}
+
 .footer .subscribe.border {
   border-bottom: none;
 }
 
 .footer .subscribe h5 {
   font-size: 26px;
+  font-weight: 600;
   padding: 5px 0;
   padding-bottom: 10px;
 }
@@ -541,12 +604,14 @@ section {
   width: 100%;
   float: left;
   position: fixed;
-  padding-right: 20px;
+  padding-bottom: 5px;
   display: inline-block;
+  background-color: white;
 }
 
 .menu ul li {
-  border-top: 3px solid black;
+  display: none;
+  border-bottom: 3px solid black;
 }
 
 .menu ul li:last-child {
@@ -554,7 +619,6 @@ section {
 }
 
 .menu ul li {
-  display: none;
 }
 
 .menu ul li.active {
@@ -581,36 +645,51 @@ section {
   float: left;
   display: block;
   margin-top: 33px;
-  border-top: 3px solid black;
+  padding-right: 10px;
+}
+
+.about .description {
+  width: 100%;
+  padding-top: 4px;
 }
 
 .about .description p {
-  font-size: 26px;
+  font-size: 37px;
   font-weight: 500;
-  margin-bottom: 60px;
+  line-height: 45px;
+  font-family: 'SuisseIntl-Medium';
 }
 
 .about .description img {
-  margin-top: 200px;
+  margin-top: 50px;
   max-width: 100%;
 }
 
 .about .sponsors {
-  padding-top: 50px;
+  min-height: 85vh;
+  padding-top: 65px;
 }
 
 .about .sponsors .logo {
-  display: inline-block;
   width: 100%;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 25px;
 }
 
 .about .sponsors .logo img {
   margin: 0 auto;
-  max-width: 200px;
+  max-width: 80%;
+}
+
+.about .team {
+  min-height: 90vh;
+  padding: 65px 0;
 }
 
 .about .team dl {
-  width: 100%   ;
+  width: 100%;
+  float: left;
   margin-right: 10%;
   padding-bottom: 20px;
   display: inline-block;
@@ -632,18 +711,33 @@ section {
     width: 20%;
   }
 
+  .menu ul li {
+    border-top: 3px solid black;
+    border-bottom: none;
+    display: block;
+  }
+
   .about {
     margin-top: 0;
-    margin-left: 22.5%;
     display: inline-block;
-    width: calc(80% - 40px);
+    margin-left: calc(25%);
+    width: calc(75.5%);
+  }
+
+  .about .description {
+    padding-top: 0;
+    border-top: 3px solid black;
   }
 
   .about .team dl {
     width: 30%;
+    margin-right: 5%;
   }
 
-
+  .about .sponsors .logo {
+    width: 45%;
+    text-align: left;
+  }
 
 }
 
@@ -652,8 +746,13 @@ section {
   to {padding-left: 3px;}
 }
 
+.artist {
+  min-height: 50vh;
+  margin-bottom: 30px;
+}
+
 .artist table {
-  margin-bottom: 300px;
+  table-layout: fixed;
 }
 
 .artist table td {
@@ -677,53 +776,150 @@ section {
   border-top: 3px solid black;
 }
 
-.artist table th span.name {
-  width: 60%;
+.artist table td span:last-child {
 }
 
-.artist table td span.name {
-  width: 60%;
+.artist table th span.artist-content {
+  width: 100%;
+  transition: padding .2s linear;
 }
 
 .artist table td span.artist-content {
-  max-height: 35px;
+  width: 100%;
+  cursor: pointer;
+  max-height: 40px;
   overflow: hidden;
-  transition: max-height .2s ease-in;
+  transition: max-height .6s ease-in;
 }
 
-.artist table td .name:hover {
-  background-color: red;
+.artist table th.artist-year {
+  display: none;
+  width: 10%;
 }
 
-.artist table td .name:hover ~ .artist table td .polaroid {
-  display: block;
+.artist table th.artist-year span {
+  font-size: 26px;
+  line-height: 26px;
+  padding-top: 5px;
+  height: 27px;
+}
+
+
+
+.artist table td.artist-year {
+  display: none;
+}
+
+.artist table th.month-day {
+  width: 20%;
+}
+
+.artist table td span.artist-content.open {
+  max-height: 1000px;
+}
+
+.artist table td span.artist-content .name {
+  font-size: 26px;
+}
+
+
+.artist table td span.artist-content .video {
+  max-height: 30px;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height .4s ease-in;
+}
+
+.artist table td span.artist-content .video.open {
+  max-height: 340px;
+  height: 340px;
+}
+
+.artist table td span.artist-content.open .video.open {
+  /*overflow: unset;*/
+}
+
+.artist table td span.artist-content .video iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.artist table td span.artist-content .photos {
+  position: relative;
+  width: 100%;
+  max-height: 30px;
+  overflow: hidden;
+  transition: max-height .4s ease-in;
+}
+
+
+.artist table td span.artist-content .photos-container {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.artist table td span.artist-content .photos h5 {
+}
+
+.artist table td span.artist-content .photos.open {
+  max-height: 335px;
+  height: 340px;
+}
+
+
+.artist table td span.artist-content .photos img {
+}
+
+.artist table td span.artist-content .photos img {
+  height: 300px;
+  display: inline-block;
+  overflow: scroll;
+}
+
+.artist table td .social {
+  width: 100%;
 }
 
 .artist table td .polaroid {
+  top: 63px;
+  right: 11%;
+  width: 300px;
+  border: none;
   display: none;
+  position: fixed;
 }
 
 .artist table td .polaroid img {
+  float: right;
   max-width: 300px;
 }
 
+@media screen and (min-width: 992px) {
+  .artist table td .artist-content .name:hover ~ .polaroid {
+    display: block;
+  }
 
-/*
-.artist table td span.artist-content:hover {
-  max-height: 1000px;
-  background-color: red;
+  .artist table th.artist-year {
+    display: table-cell;
+    width: 20%;
+  }
+
+  .artist table td.artist-year {
+    display: table-cell;
+    width: 20%;
+  }
+
+  .artist table th.month-day {
+    width: 10%;
+  }
+
+  .artist table th span.artist-content {
+    width: 65%;
+  }
+
+  .artist table td span.artist-content {
+    width: 65%;
+  }
+
 }
-
-
-.artist table td span.month-day {
-
-}
-
- {
-  max-height: 10px;
-  max-width: 100px;
-  display: none;
-  transition: max-height 3s linear;
-}
-
-*/
